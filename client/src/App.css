@@ -1,0 +1,784 @@
+/* =================================
+   MAIN PAGE
+================================= */
+
+.app {
+  min-height: 100vh;
+  background: #eff6ff;
+  color: #0f172a;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =================================
+   NAVBAR
+================================= */
+
+.navbar {
+  background: #1e3a8a;
+  color: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Navbar links */
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar nav a:hover {
+  color: #bfdbfe;
+}
+
+/* Navbar buttons */
+
+.navbar nav button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navbar nav button:hover {
+  color: #bfdbfe;
+}
+
+
+/* =================================
+   HERO SECTION
+================================= */
+
+.hero {
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #1e40af;
+  margin: 0 0 20px 0;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #475569;
+}
+
+
+/* =================================
+   SEARCH BOX
+================================= */
+
+.hero input {
+  margin-top: 20px;
+  width: 350px;
+  max-width: 90%;
+  padding: 14px;
+  border: 2px solid #3b82f6;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.hero input:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 5px #93c5fd;
+}
+
+
+/* =================================
+   PARKING SECTION
+================================= */
+
+.parking-section {
+  padding: 30px 50px 60px;
+}
+
+.parking-section h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+
+/* =================================
+   PARKING GRID
+================================= */
+
+.parking-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+/* =================================
+   PARKING CARD
+================================= */
+
+.parking-card {
+  background: #ffffff;
+  width: 280px;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 5px 15px rgba(30, 64, 175, 0.15);
+  box-sizing: border-box;
+}
+
+.parking-card h2 {
+  color: #1d4ed8;
+  margin-top: 0;
+}
+
+.parking-card p {
+  color: #475569;
+  font-size: 16px;
+}
+
+
+/* =================================
+   PARKING CARD BUTTONS
+================================= */
+
+.parking-card > button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-right: 8px;
+}
+
+.parking-card > button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =================================
+   EDIT BUTTON
+================================= */
+
+.parking-card > button:nth-of-type(2) {
+  background: #3b82f6;
+}
+
+.parking-card > button:nth-of-type(2):hover {
+  background: #2563eb;
+}
+
+
+/* =================================
+   BOOKING FORM
+================================= */
+
+.booking-form {
+  margin-top: 20px;
+  padding: 15px;
+  background: #dbeafe;
+  border-radius: 10px;
+}
+
+.booking-form h3 {
+  color: #1e3a8a;
+}
+
+.booking-form label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #334155;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #93c5fd;
+  border-radius: 6px;
+  background: white;
+}
+
+
+/* Booking form buttons */
+
+.booking-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-right: 6px;
+}
+
+.booking-form button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =================================
+   LIST YOUR SPACE FORM
+================================= */
+
+.list-space-form {
+  width: 90%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.list-space-form h2 {
+  color: #2145a0;
+  margin-bottom: 25px;
+}
+
+.list-space-form label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #334155;
+}
+
+.list-space-form input {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #b8cfff;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.list-space-form input:focus {
+  outline: none;
+  border: 2px solid #2864e8;
+}
+
+.list-space-form button {
+  margin: 20px 5px 0;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2864e8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list-space-form button:hover {
+  background: #2145a0;
+}
+
+
+/* =================================
+   MY PARKING SPACES
+================================= */
+
+.my-parking-section {
+  width: 90%;
+  max-width: 1100px;
+  margin: 60px auto 50px;
+  padding: 35px 25px;
+  text-align: center;
+  border-top: 2px solid #bfdbfe;
+  box-sizing: border-box;
+}
+
+.my-parking-section h2 {
+  margin: 0 0 30px;
+  font-size: 30px;
+  color: #1e3a8a;
+}
+
+.my-parking-section > p {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+
+/* Parking cards inside My Parking Spaces */
+
+.my-parking-section .parking-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+
+/* =================================
+   EDIT PARKING FORM
+================================= */
+
+.edit-parking-form {
+  width: 90%;
+  max-width: 520px;
+  margin: 0 auto 35px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(30, 64, 175, 0.12);
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.edit-parking-form h3 {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #1e40af;
+  font-size: 23px;
+}
+
+.edit-parking-form input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f8fafc;
+  color: #0f172a;
+  outline: none;
+}
+
+.edit-parking-form input:focus {
+  border-color: #2563eb;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+
+/* Edit form buttons */
+
+.edit-parking-form button {
+  padding: 11px 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/* Save Changes */
+
+.edit-parking-form button:first-of-type {
+  background: #2563eb;
+  color: white;
+}
+
+.edit-parking-form button:first-of-type:hover {
+  background: #1d4ed8;
+}
+
+
+/* Cancel */
+
+.edit-parking-form button:last-of-type {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+.edit-parking-form button:last-of-type:hover {
+  background: #cbd5e1;
+}
+
+
+/* =================================
+   MY BOOKINGS
+================================= */
+
+.bookings-section {
+  padding: 30px 50px 70px;
+}
+
+.bookings-section h2 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+.booking-card {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 20px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 5px 15px rgba(30, 64, 175, 0.15);
+  box-sizing: border-box;
+}
+
+.booking-card h3 {
+  color: #1d4ed8;
+  margin-top: 0;
+}
+
+.booking-card p {
+  color: #475569;
+  font-size: 16px;
+}
+
+.booking-card button {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.booking-card button:hover {
+  background: #b91c1c;
+}
+
+
+/* =================================
+   REGISTER PAGE
+================================= */
+
+.register-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  background: white;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+  box-sizing: border-box;
+}
+
+.register-card h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #1e3a8a;
+  font-size: 30px;
+}
+
+.register-card > p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.register-card label {
+  display: block;
+  margin-bottom: 7px;
+  margin-top: 16px;
+  color: #334155;
+  font-weight: bold;
+}
+
+.register-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f8fafc;
+  outline: none;
+}
+
+.register-card input:focus {
+  background: white;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.register-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-card button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =================================
+   LOGIN PAGE
+================================= */
+
+.login-page {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  padding: 35px;
+  background: white;
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.15);
+  box-sizing: border-box;
+}
+
+.login-card h1 {
+  margin: 0 0 8px;
+  text-align: center;
+  color: #1e3a8a;
+  font-size: 30px;
+}
+
+.login-card > p {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 28px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 7px;
+  margin-top: 16px;
+  color: #334155;
+  font-weight: bold;
+}
+
+.login-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 14px;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f8fafc;
+  outline: none;
+}
+
+.login-card input:focus {
+  background: white;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-card button:hover {
+  background: #1d4ed8;
+}
+
+
+/* =================================
+   MOBILE RESPONSIVE
+================================= */
+
+@media (max-width: 800px) {
+
+  .navbar {
+    padding: 18px 25px;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .navbar nav {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+
+  .parking-section {
+    padding: 25px 20px 50px;
+  }
+
+  .bookings-section {
+    padding: 25px 20px 50px;
+  }
+
+  .my-parking-section {
+    width: 95%;
+    padding: 30px 15px;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .navbar h2 {
+    font-size: 24px;
+  }
+
+  .navbar nav {
+    gap: 12px;
+  }
+
+  .navbar nav a,
+  .navbar nav button {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 50px 15px 30px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .hero input {
+    width: 90%;
+  }
+
+  .parking-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .my-parking-section h2 {
+    font-size: 25px;
+  }
+
+  .edit-parking-form {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .edit-parking-form button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .register-card,
+  .login-card {
+    padding: 25px 20px;
+  }
+}
+
+/* =================================
+   BOOKING SUCCESS MESSAGE
+================================= */
+
+.booking-success-message {
+  margin-top: 15px;
+  padding: 10px 12px;
+  background: #dbeafe;
+  border: 1px solid #93c5fd;
+  border-radius: 8px;
+  color: #1e3a8a !important;
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+/* =========================
+   GLOBAL TEXT COLOR FIX
+   ========================= */
+
+body,
+.app,
+.app h1,
+.app h2,
+.app h3,
+.app h4,
+.app h5,
+.app h6,
+.app p,
+.app label,
+.app span,
+.app a {
+  color: #000000;
+}
+
+/* Input text */
+input,
+textarea,
+select {
+  color: #000000;
+}
+
+/* Input placeholder text */
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+/* Buttons */
+button {
+  color: #000000;
+}

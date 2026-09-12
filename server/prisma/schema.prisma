@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model ParkingSpace {
+  id           Int       @id @default(autoincrement())
+  title        String
+  location     String
+  pricePerHour Int
+  ownerId       Int?
+  owner        User?      @relation(fields: [ownerId], references: [id])
+
+  bookings     Booking[]
+}
+
+model Booking {
+  id             Int          @id @default(autoincrement())
+  parkingSpaceId Int
+  userId         Int?
+  date           String
+  time           String
+  createdAt      DateTime     @default(now())
+
+  @@unique([parkingSpaceId, date, time])
+
+  parkingSpace   ParkingSpace @relation(fields: [parkingSpaceId], references: [id])
+  user           User?        @relation(fields: [userId], references: [id])
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String
+
+  bookings Booking[]
+  parkingSpaces ParkingSpace[]
+}
