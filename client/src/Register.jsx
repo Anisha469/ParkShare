@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Register() {
+function Register({ onRegister }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -8,10 +8,16 @@ function Register() {
   const handleRegister = async (e) => {
     e.preventDefault();
 
-    if (!name || !email || !password) {
+    if (!name.trim() || !email.trim() || !password) {
       alert("Please fill all fields.");
       return;
     }
+
+    if (name.trim().length < 2) {
+      alert("Name must be at least 2 characters long.");
+      return;
+    }
+
     if (password.length < 6) {
       alert("Password must be at least 6 characters long.");
       return;
@@ -26,8 +32,8 @@ function Register() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name,
-            email,
+            name: name.trim(),
+            email: email.trim(),
             password,
           }),
         }
@@ -42,10 +48,16 @@ function Register() {
 
       alert(data.message);
 
+      // Save the logged-in user
+      localStorage.setItem("user", JSON.stringify(data.user));
+
+      // Update App.jsx immediately without refreshing
+      onRegister(data.user);
+
+      // Clear the form
       setName("");
       setEmail("");
       setPassword("");
-
     } catch (error) {
       console.error("Registration error:", error);
       alert("Unable to connect to the server.");
@@ -54,15 +66,11 @@ function Register() {
 
   return (
     <div className="register-page">
-
       <div className="register-card">
-
         <h1>Create Account</h1>
-
         <p>Join ParkShare today</p>
 
         <form onSubmit={handleRegister}>
-
           <label>Name</label>
 
           <input
@@ -93,11 +101,8 @@ function Register() {
           <button type="submit">
             Register
           </button>
-
         </form>
-
       </div>
-
     </div>
   );
 }

@@ -268,7 +268,7 @@ function App() {
       </header>
 
       {showRegister && (
-        <Register />
+        <Register onRegister={setCurrentUser} />
       )}
 
       {showLogin && (
